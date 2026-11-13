@@ -18,7 +18,7 @@ jobs:
           gcc --version
 
       - name: Build payload (build.sh gates on Ubuntu 24.04 + GCC 13.3.0)
-        run: ./build.sh
+        run: bash ./build.sh   # build.sh is committed without the execute bit
 
       - name: Upload payload artifacts
         uses: actions/upload-artifact@v4
